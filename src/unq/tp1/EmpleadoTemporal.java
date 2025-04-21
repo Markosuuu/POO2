@@ -36,14 +36,13 @@ public class EmpleadoTemporal extends Empleado{
 
     
     public double retenciones() {
-        /*
-        Obra Social: 10% de su sueldo bruto + $25 si supera los 50 años
-        Aportes Jubilatorios: 10% de su sueldo bruto + $5 por cada hora extra.
-        */
         int antiguedad = (this.edad() > 50) ? 25 : 0;
         double porcentajeSueldoBruto = this.sueldoBruto() * 0.1;
-
+        
+        // Obra Social: 10% de su sueldo bruto + $25 si supera los 50 años
         double obraSocial = porcentajeSueldoBruto + antiguedad;
+        
+        // Aportes Jubilatorios: 10% de su sueldo bruto + $5 por cada hora extra.
         double aportesJubilatorios = porcentajeSueldoBruto + 5 * cantHorasExtra;
 
         return obraSocial + aportesJubilatorios;
