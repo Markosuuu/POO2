@@ -1,4 +1,4 @@
-package unq.tp1;
+package unq.tp2;
 
 public class Empresa {
     private String nombre;

@@ -1,4 +1,4 @@
-package unq.tp1;
+package unq.tp2;
 
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
