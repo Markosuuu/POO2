@@ -49,6 +49,25 @@ public class EmpleadoTemporal extends Empleado{
         return obraSocial + aportesJubilatorios;
     }
 
-    
+    public String generarReciboDeHaberes() {
+        double sueldoBruto = this.sueldoBruto();
+
+        String recibo = 
+            "Nombre: " + this.nombre + "\n" + 
+            "Direccion: " + this.direccion + "\n" + 
+            "Fecha de emision: " + LocalDate.now().toString()+ "\n" +
+            "Sueldo bruto: " + sueldoBruto + "\n" +
+            "Sueldo neto: " + this.sueldoNeto() + "\n" +
+            "Desgloce de conceptos: " + "\n" +
+            "Sueldo bruto = " + sueldoBruto + "\n" +
+            "* Sueldo basico: " + this.sueldoBasico + "\n" +
+            "* Horas Extras: $40 por cada hora (" + this.cantHorasExtra + ") = $" + this.cantHorasExtra*40 + "\n" +
+            "Retenciones = " + this.retenciones() + "\n" +
+            "* Obra social: 10% del sueldo bruto ($" + sueldoBruto*0.1 + ") + $25 si supera los 50 anios ($" + ((this.edad() > 50) ? 25 : 0) + ")\n" +
+            "* Aporte jubilatorio: 10% del sueldo bruto ($" + sueldoBruto*0.1 + ") + $5 por cada hora extra (" + this.cantHorasExtra + ") = $" + (this.sueldoBruto()*0.1 +5*this.cantHorasExtra) + "\n" +
+            " ------------------ " + "\n";
+        
+        return recibo;
+    }
     
 }
