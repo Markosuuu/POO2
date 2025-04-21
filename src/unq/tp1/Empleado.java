@@ -4,11 +4,11 @@ import java.time.LocalDate;
 import java.time.Period;
 
 abstract class Empleado {
-    private String nombre;
-    private String direccion;
-    private String estadoCivil;
-    private LocalDate fechaNacimiento;
-    private double sueldoBasico;
+    protected String nombre;
+    protected String direccion;
+    protected String estadoCivil;
+    protected LocalDate fechaNacimiento;
+    protected double sueldoBasico;
     
     // Constructor
     public Empleado(String nombre, String direccion, String estadoCivil, LocalDate fechaNacimiento,
@@ -75,5 +75,7 @@ abstract class Empleado {
     public double sueldoNeto() {
         return this.sueldoBruto() - this.retenciones();
     }
+
+    abstract String generarReciboDeHaberes();
 
 }
