@@ -29,6 +29,36 @@ public class Empresa {
         this.cuit = cuit;
     }
 
+    public double montoSueldosNetoTotal() {
+        
+        double monto = 0d;
+
+        for (Empleado empleado : empleados) {
+            monto += empleado.sueldoNeto();
+        }
+        
+        return monto;
+    }
+
+    public double montoSueldosBrutosTotal() {
+        double monto = 0d;
+
+        for (Empleado empleado : empleados) {
+            monto += empleado.sueldoBruto();
+        }
+
+        return monto;
+    }
+
+    public double montoRetencionesTotal() {
+        double monto = 0d;
+
+        for (Empleado empleado : empleados) {
+            monto += empleado.retenciones();
+        }
+
+        return monto;
+    }
 
     
 }
