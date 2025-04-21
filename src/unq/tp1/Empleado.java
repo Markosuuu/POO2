@@ -1,6 +1,7 @@
 package unq.tp1;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 abstract class Empleado {
     private String nombre;
@@ -63,7 +64,8 @@ abstract class Empleado {
     // Methods
 
     public int edad() {
-        return 0; // importar Period
+        Period tiempo = Period.between(this.fechaNacimiento, LocalDate.now());
+        return tiempo.getYears();
     }
 
     abstract double sueldoBruto(); // Definen subclases
