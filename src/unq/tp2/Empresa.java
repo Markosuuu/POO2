@@ -60,5 +60,14 @@ public class Empresa {
         return monto;
     }
 
+    public String realizarLiquidaciones() {
+        String liquidaciones = "";
+
+        for (Empleado empleado : empleados) {
+            liquidaciones += empleado.generarReciboDeHaberes();
+        }
+
+        return liquidaciones;
+    }
     
 }
