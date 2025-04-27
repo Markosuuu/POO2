@@ -6,7 +6,6 @@ import java.util.List;
 public class Supermercado {
     private String nombre;
     private String direccion;
-    // private Producto[] productos = {};
     private List<Producto> productos = new ArrayList<Producto>();
     
     
