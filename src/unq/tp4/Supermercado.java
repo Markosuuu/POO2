@@ -6,8 +6,7 @@ import java.util.List;
 public class Supermercado {
     private String nombre;
     private String direccion;
-    private List<Producto> productos = new ArrayList<Producto>();
-    
+    private List<Producto> productos;
     
     public Supermercado(String nombre, String direccion, List<Producto> productos) {
         this.nombre = nombre;
@@ -18,6 +17,7 @@ public class Supermercado {
     public Supermercado(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
+        this.productos = new ArrayList<Producto>();
     }
 
     public String getNombre() {
