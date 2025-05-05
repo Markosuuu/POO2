@@ -11,8 +11,8 @@ public class CajaRegistradora {
         return montoActual;
     }
 
-    public void registrar(Producto prod) {
-        this.montoActual += prod.getPrecioFinal();
+    public void registrar(Cobrable item) {
+        this.montoActual += item.montoAPagar();
     }
 
 }
