@@ -28,7 +28,7 @@ public class ProductoTest {
     
     @Test
     public void testGetPrecioFinal() {
-        assertEquals(17.5d, harina.getPrecioFinal());
+        assertEquals(17.5d, harina.montoAPagar());
 
     }
 

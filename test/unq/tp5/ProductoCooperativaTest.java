@@ -27,7 +27,7 @@ public class ProductoCooperativaTest {
     
     @Test
     public void testGetPrecioFinal() {
-        assertEquals(22.5d, fideos.getPrecioFinal());
+        assertEquals(22.5d, fideos.montoAPagar());
 
     }
 }

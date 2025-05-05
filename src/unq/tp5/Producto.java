@@ -1,6 +1,6 @@
 package unq.tp5;
 
-public class Producto {
+public class Producto implements Cobrable {
     private String nombre;
     private double precioBase;
 
@@ -21,7 +21,7 @@ public class Producto {
         this.precioBase = precioBase;
     }
 
-    public double getPrecioFinal() {
+    public double montoAPagar() {
         return getPrecioBase();
     }
 }
